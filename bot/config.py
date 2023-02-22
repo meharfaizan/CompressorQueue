@@ -16,14 +16,14 @@
 from decouple import config
 
 try:
-    APP_ID = config("APP_ID", default=6, cast=int)
-    API_HASH = config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
-    BOT_TOKEN = config("BOT_TOKEN")
+    APP_ID = config("APP_ID",'6534707' default=6, cast=int)
+    API_HASH = config("API_HASH",'4bcc61d959a9f403b2f20149cbbe627a')
+    BOT_TOKEN = config("BOT_TOKEN",'5142296427:AAGe28CHWVme4OJ4v51xxqvNbnPwD8vxQic')
     DEV = 1322549723
-    OWNER = config("OWNER")
+    OWNER = config("OWNER",'1430593323')
     FFMPEG = config(
         "FFMPEG",
-        default='ffmpeg -i "{}" -preset ultrafast -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? "{}"',
+        default='ffmpeg -i "{}" -preset fast -c:v libx264 -crf 28 -map 0:v -c:a libopus -c:s copy -map 0"{}"',
     )
     THUMB = config(
         "THUMBNAIL", default="https://graph.org/file/75ee20ec8d8c8bba84f02.jpg"
